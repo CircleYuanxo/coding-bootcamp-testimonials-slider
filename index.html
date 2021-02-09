@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Coding Bootcamp Testimonials Slider</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: url(./images/pattern-curve.svg) no-repeat left bottom;
+      background-size: 300px;
+      background-attachment: fixed;
+
+    }
+
+    .img__wrapper {
+      position: relative;
+      text-align: center;
+    }
+
+    .img__background {
+      width: 330px;
+      z-index: -1;
+    }
+
+    .img__img {
+      display: block;
+      width: 255px;
+      position: absolute;
+      top: 30px;
+      left: 58px;
+      border-radius: 5px;
+      box-shadow: -10px 50px 50px -50px hsl(240, 38%, 20%);
+    }
+
+    .img__icon_wrapper {
+      position: absolute;
+      bottom: 8px;
+      left: 145px;
+      width: 90px;
+      height: 45px;
+      padding: 14px;
+      background-color: white;
+      border-radius: 50px;
+    }
+
+    .img__icon_prev {
+      margin-right: 30px;
+    }
+
+    .icon {
+      width: 10px;
+    }
+
+    .icon:hover {
+      cursor: pointer;
+    }
+
+    .quote__wrapper {
+      position: relative;
+      text-align: center;
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    .quote_bg {
+      width: 60px;
+      position: relative;
+      top: 32px;
+    }
+
+    .quote_quote {
+      padding: 0 15px;
+      font-weight: 300;
+    }
+
+    .quote__info-wrapper {
+      margin-top: 20px;
+      margin-bottom: 80px;
+      font-size: 14px;
+    }
+
+    .quote__info-name {
+      font-weight: 700;
+    }
+
+    .quote__info-position {
+      color: hsl(240, 18%, 77%);
+    }
+
+    .hide {
+      display: none;
+    }
+
+    @media screen and (min-width: 375px) {
+      html {
+        height: 100%;
+      }
+
+      body {
+        background-size: 450px;
+        margin: 0;
+        min-width: 100%;
+      }
+
+      .container {
+        display: flex;
+        flex-flow: row-reverse;
+      }
+
+      .img__background {
+        width: 500px;
+        margin-top: 20px;
+        margin-right: 70px;
+      }
+
+      .img__img {
+        width: 385px;
+        top: 68px;
+        left: 50px;
+        box-shadow: -25px 50px 40px -50px hsl(240, 38%, 20%);
+      }
+
+      .img__icon_wrapper {
+        bottom: 18px;
+        left: 85px;
+        width: 85px;
+      }
+
+      .quote__wrapper {
+        text-align: left;
+        font-size: 24px;
+        left: 100px;
+        margin-top: 100px;
+      }
+
+      .quote_bg {
+        top: 36px;
+        left: 73px;
+      }
+
+      .quote_quote {
+        padding: 0;
+        width: 480px;
+      }
+
+      .quote__info-wrapper {
+        display: flex;
+        font-size: 16px;
+      }
+
+      .quote__info-name {
+        margin-right: 5px;
+      }
+
+      .hide {
+        display: none;
+      }
+
+
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container tanya">
+    <div class="img__wrapper">
+      <img src="./images/pattern-bg.svg" class="img__background">
+      <img src="./images/image-tanya.jpg" class="img__img">
+      <div class="img__icon_wrapper">
+        <img src="./images/icon-prev.svg" class="icon img__icon_prev">
+        <img src="./images/icon-next.svg" class="icon img__icon_next">
+      </div>
+    </div>
+    <div class="quote__wrapper">
+      <img src="./images/pattern-quotes.svg" class="quote_bg">
+      <div class="quote_quote">
+        <div class="">
+          “ I’ve been interested in coding for a while but never taken the jump, until now.
+          I couldn’t recommend this course enough. I’m now in the job of my dreams and so
+          excited about the future. ”
+        </div>
+      </div>
+      <div class="quote__info-wrapper">
+        <div class="quote__info-name">
+          Tanya Sinclair
+        </div>
+        <div class="quote__info-position">
+          UX Engineer
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container john hide">
+    <div class="img__wrapper">
+      <img src="./images/pattern-bg.svg" class="img__background">
+      <img src="./images/image-john.jpg" class="img__img">
+      <div class="img__icon_wrapper">
+        <img src="./images/icon-prev.svg" class="icon img__icon_prev">
+        <img src="./images/icon-next.svg" class="icon img__icon_next">
+      </div>
+    </div>
+    <div class="quote__wrapper">
+      <img src="./images/pattern-quotes.svg" class="quote_bg">
+      <div class="quote_quote">
+        <div class="">
+          “ If you want to lay the best foundation possible I’d recommend taking this course.
+          The depth the instructors go into is incredible. I now feel so confident about
+          starting up as a professional developer. ”
+        </div>
+      </div>
+      <div class="quote__info-wrapper">
+        <div class="quote__info-name">
+          John Tarkpor
+        </div>
+        <div class="quote__info-position">
+          Junior Front-end Developer
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    let icon = document.querySelectorAll('.img__icon_wrapper');
+    icon.forEach((e) => {
+      e.addEventListener('click', (event) => {
+        if (event.target.classList.contains('icon')) {
+          let tanya = document.querySelector('.tanya');
+          let john = document.querySelector('.john');
+          console.log('clicking')
+          tanya.classList.toggle('hide')
+          john.classList.toggle('hide')
+        }
+      })
+    })
+  </script>
+
+</body>
+
+</html>
